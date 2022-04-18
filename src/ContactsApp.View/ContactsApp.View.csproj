@@ -8,7 +8,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Extended.Wpf.Toolkit" Version="4.3.0" />
+    <None Remove="img\notebook-of-contacts.png" />
+    <None Remove="img\pencil.png" />
+    <None Remove="img\plus.png" />
+    <None Remove="img\substract.png" />
+    <None Remove="notebook-of-contacts.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="img\notebook-of-contacts.png" />
+    <Resource Include="img\pencil.png" />
+    <Resource Include="img\plus.png" />
+    <Resource Include="img\substract.png" />
   </ItemGroup>
 
 </Project>

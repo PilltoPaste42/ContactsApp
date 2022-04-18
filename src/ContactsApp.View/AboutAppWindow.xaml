@@ -5,20 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ContactsApp.View"
         mc:Ignorable="d"
-        Title="About" Height="250" Width="400" ResizeMode="NoResize" Background="Bisque">
-    <DockPanel>
+        Title="About"
+        Height="250" Width="400"
+        ResizeMode="NoResize"
+        Icon="img/notebook-of-contacts.png">
+
+    <DockPanel Margin="5">
+
         <StackPanel DockPanel.Dock="Top">
-            <Label FontWeight="Bold" FontSize="36">ContactsApp</Label>
+            <Label
+                FontWeight="Bold"
+                FontSize="36">
+
+                ContactsApp
+            </Label>
             <Label>Version 0.01</Label>
         </StackPanel>
+
         <StackPanel DockPanel.Dock="Top">
-            <Label>Author: Maxim Sukharev </Label>
-            <Label> E-mail: maxs130872@gmail.com</Label>
-            <Label>GitHub: PilltoPaste42/ContactsApp</Label>
+
+            <TextBlock>Author: <Hyperlink>Maxim Sukharev</Hyperlink></TextBlock>
+            <TextBlock> E-mail: <Hyperlink>maxs130872@gmail.com</Hyperlink></TextBlock>
+            <TextBlock>GitHub: <Hyperlink>PilltoPaste42/ContactsApp</Hyperlink></TextBlock>
         </StackPanel>
 
         <Label DockPanel.Dock="Bottom">2022 PilltoPaste42©</Label>
     </DockPanel>
-    
-
 </Window>
