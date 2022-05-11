@@ -19,7 +19,10 @@
 
         private Window CreateAddContactForm()
         {
-            var window = new AddContactWindow();
+            var window = new AddContactWindow
+            {
+                Owner = this
+            };
             window.Show();
 
             return window;
@@ -37,8 +40,10 @@
 
         private void MenuHelpAbout_OnClick(object sender, RoutedEventArgs e)
         {
-            var window = new AboutAppWindow();
-            window.Focus();
+            var window = new AboutAppWindow
+            {
+                Owner = this
+            };
             window.Show();
         }
     }
