@@ -3,86 +3,90 @@
 using System;
 
 /// <summary>
-///     Класс для хранения контакта
+///   Класс для хранения контакта
 /// </summary>
 public class Contact : ICloneable
 {
+    private DateTime _birthday;
+    private string? _email;
+    private string? _firstName;
+    private string? _lastName;
+    private string? _vkId;
+
     /// <summary>
-    ///     Дата рождения
+    ///   Дата рождения
     /// </summary>
     public DateTime Birthday
     {
-        get => Birthday;
+        get => _birthday;
         set
         {
             if (value > DateTime.Now || value.Year < 1900)
                 throw new ArgumentOutOfRangeException();
+
+            _birthday = value;
         }
     }
 
     /// <summary>
-    ///     Эл. почта
+    ///   Эл. почта
     /// </summary>
-    public string Email
+    public string? Email
     {
-        get => Email;
+        get => _email;
         set
         {
-            ValidateStringLength(value, 0, 50);
-            Email = value;
+            ValidateStringLength(value!, 0, 50);
+            _email = value;
         }
     }
 
     /// <summary>
-    ///     Имя контакта
+    ///   Имя контакта
     /// </summary>
-    public string FirstName
+    public string? FirstName
     {
-        get => FirstName;
+        get => _firstName;
         set
         {
-            ValidateStringLength(value, 0, 50);
-            FirstName =
-                value[..1].ToUpper() +
-                value[1..].ToLower();
+            ValidateStringLength(value!, 0, 50);
+            _firstName = value;
         }
     }
 
     /// <summary>
-    ///     Фамилия контакта
+    ///   Фамилия контакта
     /// </summary>
-    public string LastName
+    public string? LastName
     {
-        get => LastName;
+        get => _lastName;
         set
         {
-            ValidateStringLength(value, 0, 50);
-            LastName =
-                value[..1].ToUpper() +
-                value[1..].ToLower();
+            ValidateStringLength(value!, 0, 50);
+            _lastName = value;
         }
     }
 
     /// <summary>
-    ///     Телефонный номер
+    ///   Телефонный номер
     /// </summary>
-    public PhoneNumber PhoneNumber { get; set; }
+    public PhoneNumber? PhoneNumber { get; set; }
 
     /// <summary>
-    ///     Идентификатор контакта в соц. сети vk.com
+    ///   Идентификатор контакта в соц. сети vk.com
     /// </summary>
-    public string VkId
+    public string? VkId
     {
-        get => VkId;
+        get => _vkId;
         set
         {
-            ValidateStringLength(value, 0, 15);
-            VkId = value;
+            ValidateStringLength(value!, 0, 15);
+            _vkId = value;
         }
     }
 
     /// <summary>
-    ///     Метод клонирования контакта
+    ///   Метод клонирования контакта
     /// </summary>
     /// <returns> Копия контакта </returns>
     public object Clone()
@@ -101,7 +105,7 @@ public class Contact : ICloneable
     }
 
     /// <summary>
-    ///     Метод проверки валидации строки по ее длине
+    ///   Метод проверки валидации строки по ее длине
     /// </summary>
     /// <param name="str"> Проверяемая строка </param>
     /// <param name="minLen"> Минимально допустимая длина </param>
