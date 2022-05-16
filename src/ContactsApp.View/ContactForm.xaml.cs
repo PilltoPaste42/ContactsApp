@@ -1,4 +1,6 @@
-﻿namespace ContactsApp.View;
+﻿using System;
+
+namespace ContactsApp.View;
 
 using System.Windows.Controls;
 
@@ -36,7 +38,7 @@ public partial class ContactForm : UserControl
         {
             FirstName = FirstName.Text,
             LastName = LastName.Text,
-            PhoneNumber = new PhoneNumber(PhoneNumber.Text),
+            PhoneNumber = new PhoneNumber(ulong.Parse(PhoneNumber.Text)),
             Email = Email.Text,
             VkId = VkId.Text,
             Birthday = BirthdayDate.SelectedDate.Value
