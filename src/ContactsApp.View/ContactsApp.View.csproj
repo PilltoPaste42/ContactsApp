@@ -16,6 +16,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ContactsApp.Models\ContactsApp.Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="img\notebook-of-contacts.png" />
     <Resource Include="img\pencil.png" />
     <Resource Include="img\plus.png" />

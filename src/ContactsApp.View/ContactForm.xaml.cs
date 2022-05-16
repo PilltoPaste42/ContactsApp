@@ -1,15 +1,58 @@
-﻿namespace ContactsApp.View
+﻿namespace ContactsApp.View;
+
+using System.Windows.Controls;
+
+using ContactsApp.Models;
+
+/// <summary>
+///   Логика взаимодействия для ContactForm.xaml
+/// </summary>
+public partial class ContactForm : UserControl
 {
-    using System.Windows.Controls;
+    public ContactForm()
+    {
+        InitializeComponent();
+    }
 
     /// <summary>
-    /// Логика взаимодействия для ContactForm.xaml
+    ///   Очистка полей формы
     /// </summary>
-    public partial class ContactForm : UserControl
+    public void Clear()
     {
-        public ContactForm()
+        FirstName.Clear();
+        LastName.Clear();
+        PhoneNumber.Clear();
+        Email.Clear();
+        VkId.Clear();
+        BirthdayDate.SelectedDate = null;
+    }
+
+    /// <summary>
+    ///   Получение экземпляра контакта из формы
+    /// </summary>
+    public Contact GetContact()
+    {
+        return new Contact
         {
-            InitializeComponent();
-        }
+            FirstName = FirstName.Text,
+            LastName = LastName.Text,
+            PhoneNumber = new PhoneNumber(PhoneNumber.Text),
+            Email = Email.Text,
+            VkId = VkId.Text,
+            Birthday = BirthdayDate.SelectedDate.Value
+        };
+    }
+
+    /// <summary>
+    ///   Установка данных контакта в поля формы
+    /// </summary>
+    public void SetContact(Contact contact)
+    {
+        FirstName.Text = contact.FirstName;
+        LastName.Text = contact.LastName;
+        PhoneNumber.Text = contact.PhoneNumber?.GetToString();
+        Email.Text = contact.Email;
+        VkId.Text = contact.VkId;
+        BirthdayDate.SelectedDate = contact.Birthday;
     }
 }
