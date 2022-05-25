@@ -1,16 +1,17 @@
-<Window
+﻿<Window
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:local="clr-namespace:ContactsApp.View"
-    xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" x:Class="ContactsApp.View.MainWindow"
+    x:Class="ContactsApp.View.MainWindow"
     mc:Ignorable="d"
-    Title="ContactsApp" Height="450" Width="800" Topmost="True" Icon="/img/notebook-of-contacts.png">
+    Title="ContactsApp" Height="450" Width="600" Topmost="True" Icon="/img/notebook-of-contacts.png"
+    Closed="Window_Closed">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="3*" />
-            <ColumnDefinition Width="7*" />
+            <ColumnDefinition Width="4*" />
+            <ColumnDefinition Width="8*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="20" />
@@ -29,8 +30,10 @@
             <MenuItem Header="Edit">
                 <MenuItem Header="Add contact..."
                           Click="MenuEditAdd_OnClick" />
-                <MenuItem Header="Edit contact..." />
-                <MenuItem Header="Remove contact..." />
+                <MenuItem Header="Edit contact..."
+                          Click="MenuItem_OnClick" />
+                <MenuItem Header="Remove contact..."
+                          Click="MenuEditRemove_OnClick" />
             </MenuItem>
             <MenuItem Header="Help">
                 <MenuItem Header="About"
@@ -57,12 +60,13 @@
                          HorizontalAlignment="Stretch" />
             </DockPanel>
 
-            <ListBox
-                Grid.Row="1"
-                ScrollViewer.HorizontalScrollBarVisibility="Disabled"
-                ScrollViewer.CanContentScroll="True"
-                ScrollViewer.VerticalScrollBarVisibility="Visible"
-                Margin="5,5,5,5" />
+            <ListBox x:Name="ContactsListBox"
+                     Grid.Row="1"
+                     ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                     ScrollViewer.CanContentScroll="True"
+                     ScrollViewer.VerticalScrollBarVisibility="Visible"
+                     Margin="5,5,5,5"
+                     SelectionChanged="ContactsListBox_OnSelectionChanged" />
 
             <WrapPanel Grid.Row="2"
                        HorizontalAlignment="Left"
@@ -83,14 +87,16 @@
                         Width="20" Height="20"
                         Margin="2"
                         BorderBrush="{x:Null}"
-                        Background="{x:Null}">
+                        Background="{x:Null}"
+                        Click="EditContactButton_OnClick">
                     <Image Source="/img/pencil.png" />
                 </Button>
                 <Button x:Name="DeleteContactButton"
                         Width="20" Height="20"
                         Margin="2"
                         BorderBrush="{x:Null}"
-                        Background="{x:Null}">
+                        Background="{x:Null}"
+                        Click="DeleteContactButton_OnClick">
                     <Image Source="/img/substract.png" />
                 </Button>
             </WrapPanel>

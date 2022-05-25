@@ -2,6 +2,8 @@
 
 using System;
 
+using Newtonsoft.Json;
+
 /// <summary>
 ///   Объект для хранения номера телефона
 /// </summary>
@@ -9,6 +11,7 @@ public class PhoneNumber
 {
     private ulong _phone;
 
+    [JsonConstructor]
     public PhoneNumber(ulong phone)
     {
         Phone = phone;

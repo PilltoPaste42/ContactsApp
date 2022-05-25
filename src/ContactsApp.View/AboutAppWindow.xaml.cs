@@ -1,15 +1,14 @@
-﻿namespace ContactsApp.View
-{
-    using System.Windows;
+﻿namespace ContactsApp.View;
 
-    /// <summary>
-    /// Логика взаимодействия для AboutAppWindow.xaml
-    /// </summary>
-    public partial class AboutAppWindow : Window
+using System.Windows;
+
+/// <summary>
+///   Логика взаимодействия для AboutAppWindow.xaml
+/// </summary>
+public partial class AboutAppWindow : Window
+{
+    public AboutAppWindow()
     {
-        public AboutAppWindow()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
     }
 }

@@ -1,4 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net6.0-windows</TargetFramework>
@@ -15,9 +16,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ContactsApp.Models\ContactsApp.Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="img\notebook-of-contacts.png" />
     <Resource Include="img\pencil.png" />
     <Resource Include="img\plus.png" />
     <Resource Include="img\substract.png" />
   </ItemGroup>
+
 </Project>

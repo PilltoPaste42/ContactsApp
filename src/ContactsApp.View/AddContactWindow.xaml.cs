@@ -1,15 +1,43 @@
-﻿namespace ContactsApp.View
+﻿namespace ContactsApp.View;
+
+using System.Windows;
+
+using ContactsApp.Models;
+
+/// <summary>
+///   Логика взаимодействия для AddContactWindow.xaml
+/// </summary>
+public partial class AddContactWindow : Window
 {
-    using System.Windows;
+    private readonly App.AddContactDelegate _addContactDelegate;
+
+    public AddContactWindow(App.AddContactDelegate sender)
+    {
+        InitializeComponent();
+        SetRandomContact();
+        _addContactDelegate = sender;
+    }
+
+    private void CancelButton_OnClick(object sender, RoutedEventArgs e)
+    {
+        Close();
+    }
+
+    private void OkButton_OnClick(object sender, RoutedEventArgs e)
+    {
+        var contact = ContactForm.GetContact();
+        _addContactDelegate(contact);
+
+        Close();
+    }
 
     /// <summary>
-    /// Логика взаимодействия для AddContactWindow.xaml
+    ///   Создание заглушки контакта и установка значений в форму
     /// </summary>
-    public partial class AddContactWindow : Window
+    private void SetRandomContact()
     {
-        public AddContactWindow()
-        {
-            InitializeComponent();
-        }
+        var contact = ContactMock.Get();
+
+        ContactForm.SetContact(contact);
     }
 }
