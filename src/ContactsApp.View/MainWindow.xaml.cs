@@ -1,20 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-
 namespace ContactsApp.View
 {
+    using System.Windows;
+
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -23,6 +10,41 @@ namespace ContactsApp.View
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void AddContactButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            CreateAddContactForm();
+        }
+
+        private Window CreateAddContactForm()
+        {
+            var window = new AddContactWindow
+            {
+                Owner = this
+            };
+            window.Show();
+
+            return window;
+        }
+
+        private void MenuEditAdd_OnClick(object sender, RoutedEventArgs e)
+        {
+            CreateAddContactForm();
+        }
+
+        private void MenuFileExit_OnClick(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void MenuHelpAbout_OnClick(object sender, RoutedEventArgs e)
+        {
+            var window = new AboutAppWindow
+            {
+                Owner = this
+            };
+            window.Show();
         }
     }
 }
