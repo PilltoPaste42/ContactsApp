@@ -1,0 +1,34 @@
+﻿<Window x:Class="ContactsApp.View.AboutAppWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ContactsApp.View"
+        mc:Ignorable="d"
+        Title="About"
+        Height="250" Width="400"
+        ResizeMode="NoResize"
+        Icon="img/notebook-of-contacts.png">
+
+    <DockPanel Margin="5">
+
+        <StackPanel DockPanel.Dock="Top">
+            <Label
+                FontWeight="Bold"
+                FontSize="36">
+
+                ContactsApp
+            </Label>
+            <Label>Version 0.01</Label>
+        </StackPanel>
+
+        <StackPanel DockPanel.Dock="Top">
+
+            <TextBlock>Author: <Hyperlink>Maxim Sukharev</Hyperlink></TextBlock>
+            <TextBlock> E-mail: <Hyperlink>maxs130872@gmail.com</Hyperlink></TextBlock>
+            <TextBlock>GitHub: <Hyperlink>PilltoPaste42/ContactsApp</Hyperlink></TextBlock>
+        </StackPanel>
+
+        <Label DockPanel.Dock="Bottom">2022 PilltoPaste42©</Label>
+    </DockPanel>
+</Window>
