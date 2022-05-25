@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:local="clr-namespace:ContactsApp.View"
              mc:Ignorable="d"
              d:DesignHeight="200" d:DesignWidth="330">
     <Grid>
@@ -23,58 +22,58 @@
 
             <Label Content="Surname:" Grid.Row="0"
                    Grid.Column="0"
-                   HorizontalAlignment="Left"/>
+                   HorizontalAlignment="Left" />
             <TextBox x:Name="LastName"
                      Grid.Column="1"
                      Grid.Row="0"
                      Width="250"
                      HorizontalAlignment="Left"
-                     VerticalAlignment="Center"/>
+                     VerticalAlignment="Center" />
 
             <Label Content="Name:"
                    Grid.Column="0" Grid.Row="1"
-                   HorizontalAlignment="Left"/>
+                   HorizontalAlignment="Left" />
             <TextBox x:Name="FirstName"
                      Grid.Column="1" Grid.Row="1"
                      Width="250"
                      HorizontalAlignment="Left"
-                     VerticalAlignment="Center"/>
+                     VerticalAlignment="Center" />
 
             <Label Content="Birthday:"
                    Grid.Column="0" Grid.Row="2"
-                   HorizontalAlignment="Left"  />
+                   HorizontalAlignment="Left" />
             <DatePicker x:Name="BirthdayDate"
                         Grid.Column="1" Grid.Row="2"
                         Width="150"
                         HorizontalAlignment="Left"
-                        VerticalAlignment="Center"/>
+                        VerticalAlignment="Center" />
 
             <Label Content="Phone:"
                    Grid.Column="0" Grid.Row="3"
-                   HorizontalAlignment="Left"/>
+                   HorizontalAlignment="Left" />
             <TextBox x:Name="PhoneNumber"
                      Grid.Column="1" Grid.Row="3"
                      Width="250"
                      HorizontalAlignment="Left"
-                     VerticalAlignment="Center"/>
+                     VerticalAlignment="Center" />
 
             <Label Content="E-mail:"
                    Grid.Column="0" Grid.Row="4"
-                   HorizontalAlignment="Left"/>
+                   HorizontalAlignment="Left" />
             <TextBox x:Name="Email"
                      Grid.Column="1" Grid.Row="4"
                      Width="250"
                      HorizontalAlignment="Left"
-                     VerticalAlignment="Center"/>
+                     VerticalAlignment="Center" />
 
             <Label Content="VK:"
                    Grid.Column="0" Grid.Row="5"
-                   HorizontalAlignment="Left"/>
+                   HorizontalAlignment="Left" />
             <TextBox x:Name="VkId"
                      Grid.Column="1" Grid.Row="5"
                      Width="250"
                      HorizontalAlignment="Left"
-                     VerticalAlignment="Center"/>
+                     VerticalAlignment="Center" />
 
         </Grid>
     </Grid>

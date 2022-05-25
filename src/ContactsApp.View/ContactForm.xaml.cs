@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ContactsApp.View;
+﻿namespace ContactsApp.View;
 
 using System.Windows.Controls;
 

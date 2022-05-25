@@ -1,8 +1,8 @@
-﻿using Newtonsoft.Json;
-
-namespace ContactsApp.Models;
+﻿namespace ContactsApp.Models;
 
 using System;
+
+using Newtonsoft.Json;
 
 /// <summary>
 ///   Объект для хранения номера телефона

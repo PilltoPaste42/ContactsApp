@@ -3,7 +3,6 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:ContactsApp.View"
         mc:Ignorable="d"
         Title="About"
         Height="250" Width="400"
@@ -31,10 +30,10 @@
 
         <Label DockPanel.Dock="Bottom"
                Width="120"
-               Height="30" 
-               HorizontalAlignment="Left" 
+               Height="30"
+               HorizontalAlignment="Left"
                VerticalAlignment="Bottom">
-            
+
             2022 PilltoPaste42©
         </Label>
     </DockPanel>

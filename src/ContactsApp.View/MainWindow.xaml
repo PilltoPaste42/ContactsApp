@@ -6,7 +6,8 @@
     xmlns:local="clr-namespace:ContactsApp.View"
     x:Class="ContactsApp.View.MainWindow"
     mc:Ignorable="d"
-    Title="ContactsApp" Height="450" Width="600" Topmost="True" Icon="/img/notebook-of-contacts.png" Closed="Window_Closed">
+    Title="ContactsApp" Height="450" Width="600" Topmost="True" Icon="/img/notebook-of-contacts.png"
+    Closed="Window_Closed">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="4*" />
@@ -29,10 +30,10 @@
             <MenuItem Header="Edit">
                 <MenuItem Header="Add contact..."
                           Click="MenuEditAdd_OnClick" />
-                <MenuItem Header="Edit contact..." 
-                          Click="MenuItem_OnClick"/>
-                <MenuItem Header="Remove contact..." 
-                          Click="MenuEditRemove_OnClick"/>
+                <MenuItem Header="Edit contact..."
+                          Click="MenuItem_OnClick" />
+                <MenuItem Header="Remove contact..."
+                          Click="MenuEditRemove_OnClick" />
             </MenuItem>
             <MenuItem Header="Help">
                 <MenuItem Header="About"
@@ -64,8 +65,8 @@
                      ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                      ScrollViewer.CanContentScroll="True"
                      ScrollViewer.VerticalScrollBarVisibility="Visible"
-                     Margin="5,5,5,5" 
-                     SelectionChanged="ContactsListBox_OnSelectionChanged"/>
+                     Margin="5,5,5,5"
+                     SelectionChanged="ContactsListBox_OnSelectionChanged" />
 
             <WrapPanel Grid.Row="2"
                        HorizontalAlignment="Left"

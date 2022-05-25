@@ -73,7 +73,7 @@ public static class ContactMock
     /// </summary>
     private static PhoneNumber GetRandomPhoneNumber()
     {
-        var num = (ulong)Generator.NextInt64(70000000001, 79999999999);
+        var num = (ulong) Generator.NextInt64(70000000001, 79999999999);
         return new PhoneNumber(num);
     }
 }

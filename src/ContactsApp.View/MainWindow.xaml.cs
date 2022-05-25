@@ -1,12 +1,13 @@
-﻿using System;
+﻿namespace ContactsApp.View;
+
+using System;
 using System.Windows;
 using System.Windows.Controls;
+
 using ContactsApp.Models;
 
-namespace ContactsApp.View;
-
 /// <summary>
-///     Interaction logic for MainWindow.xaml
+///   Interaction logic for MainWindow.xaml
 /// </summary>
 public partial class MainWindow : Window
 {
@@ -21,18 +22,20 @@ public partial class MainWindow : Window
     }
 
     /// <summary>
-    ///     Обновление спика контактов
+    ///   Обновление спика контактов
     /// </summary>
     public void UpdateContactsListBox()
     {
         ContactsListBox.Items.Clear();
         foreach (var contact in _project.Contacts)
+        {
             ContactsListBox.Items
                 .Add(contact.LastName + " " + contact.FirstName);
+        }
     }
 
     /// <summary>
-    ///     Добавление контакта
+    ///   Добавление контакта
     /// </summary>
     private void AddContact(Contact contact)
     {
@@ -46,7 +49,7 @@ public partial class MainWindow : Window
     }
 
     /// <summary>
-    ///     Добавление контакта в справочник с помощью формы
+    ///   Добавление контакта в справочник с помощью формы
     /// </summary>
     private void AddContactInForm()
     {
@@ -70,7 +73,7 @@ public partial class MainWindow : Window
     }
 
     /// <summary>
-    ///     Удаление контакта
+    ///   Удаление контакта
     /// </summary>
     /// <param name="index"> Индекс контакта в списке </param>
     private void DeleteContact(int index)
@@ -84,7 +87,7 @@ public partial class MainWindow : Window
     }
 
     /// <summary>
-    ///     Удаление выбранного из списка контакта
+    ///   Удаление выбранного из списка контакта
     /// </summary>
     private void DeleteSelectedElementInContactList()
     {
@@ -106,6 +109,11 @@ public partial class MainWindow : Window
         }
     }
 
+    private void EditContactButton_OnClick(object sender, RoutedEventArgs e)
+    {
+        UpdateSelectedElementInListBox();
+    }
+
     private void MenuEditAdd_OnClick(object sender, RoutedEventArgs e)
     {
         AddContactInForm();
@@ -122,13 +130,28 @@ public partial class MainWindow : Window
         Close();
     }
 
+    private void MenuHelpAbout_OnClick(object sender, RoutedEventArgs e)
+    {
+        var window = new AboutAppWindow
+        {
+            Owner = this
+        };
+        window.Show();
+    }
+
+    private void MenuItem_OnClick(object sender, RoutedEventArgs e)
+    {
+        UpdateSelectedElementInListBox();
+    }
+
     /// <summary>
-    ///     Обновление выбранного контакта с помощью данных из формы
+    ///   Обновление выбранного контакта с помощью данных из формы
     /// </summary>
     private void UpdateSelectedElementInListBox()
     {
         var selectedIndex = ContactsListBox.SelectedIndex;
-        if (selectedIndex == -1) return;
+        if (selectedIndex == -1)
+            return;
 
         var messageBoxText = "Обновить выбранный контакт?";
         var caption = "Обновление контакта";
@@ -136,7 +159,8 @@ public partial class MainWindow : Window
         var icon = MessageBoxImage.Question;
         var result = MessageBox.Show(messageBoxText, caption, button, icon, MessageBoxResult.No);
 
-        if (result == MessageBoxResult.No) return;
+        if (result == MessageBoxResult.No)
+            return;
 
         var oldElement = _project.Contacts[selectedIndex];
         var newElement = Form.GetContact();
@@ -152,27 +176,8 @@ public partial class MainWindow : Window
         ContactsListBox.SelectedIndex = selectedIndex;
     }
 
-    private void MenuHelpAbout_OnClick(object sender, RoutedEventArgs e)
-    {
-        var window = new AboutAppWindow
-        {
-            Owner = this
-        };
-        window.Show();
-    }
-
     private void Window_Closed(object sender, EventArgs e)
     {
         _pm.SaveProject(_project);
-    }
-
-    private void EditContactButton_OnClick(object sender, RoutedEventArgs e)
-    {
-        UpdateSelectedElementInListBox();
-    }
-
-    private void MenuItem_OnClick(object sender, RoutedEventArgs e)
-    {
-        UpdateSelectedElementInListBox();
     }
 }
