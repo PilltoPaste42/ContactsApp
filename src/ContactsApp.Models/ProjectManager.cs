@@ -53,6 +53,7 @@ public sealed class ProjectManager
     }
 
     public void SaveProject(Project project)
+
     {
         var text = JsonConvert.SerializeObject(project);
         File.WriteAllText(PROJECT_FILE_PATH, text);
