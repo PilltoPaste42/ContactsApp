@@ -4,13 +4,13 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:local="clr-namespace:ContactsApp.View"
-    xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" x:Class="ContactsApp.View.MainWindow"
+    x:Class="ContactsApp.View.MainWindow"
     mc:Ignorable="d"
-    Title="ContactsApp" Height="450" Width="800" Topmost="True" Icon="/img/notebook-of-contacts.png" Closed="Window_Closed">
+    Title="ContactsApp" Height="450" Width="600" Topmost="True" Icon="/img/notebook-of-contacts.png" Closed="Window_Closed">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="3*" />
-            <ColumnDefinition Width="7*" />
+            <ColumnDefinition Width="4*" />
+            <ColumnDefinition Width="8*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="20" />

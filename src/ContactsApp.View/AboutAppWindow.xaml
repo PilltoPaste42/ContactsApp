@@ -29,6 +29,13 @@
             <TextBlock>GitHub: <Hyperlink>PilltoPaste42/ContactsApp</Hyperlink></TextBlock>
         </StackPanel>
 
-        <Label DockPanel.Dock="Bottom">2022 PilltoPaste42©</Label>
+        <Label DockPanel.Dock="Bottom"
+               Width="120"
+               Height="30" 
+               HorizontalAlignment="Left" 
+               VerticalAlignment="Bottom">
+            
+            2022 PilltoPaste42©
+        </Label>
     </DockPanel>
 </Window>
