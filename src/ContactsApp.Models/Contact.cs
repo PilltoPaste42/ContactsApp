@@ -3,7 +3,7 @@
 using System;
 
 /// <summary>
-///   Класс для хранения контакта
+///   Класс для хранения контакта.
 /// </summary>
 public class Contact : ICloneable
 {
@@ -14,7 +14,7 @@ public class Contact : ICloneable
     private string? _vkId;
 
     /// <summary>
-    ///   Дата рождения
+    ///   Дата рождения.
     /// </summary>
     public DateTime Birthday
     {
@@ -29,7 +29,7 @@ public class Contact : ICloneable
     }
 
     /// <summary>
-    ///   Эл. почта
+    ///   Эл. почта.
     /// </summary>
     public string? Email
     {
@@ -42,7 +42,7 @@ public class Contact : ICloneable
     }
 
     /// <summary>
-    ///   Имя контакта
+    ///   Имя контакта.
     /// </summary>
     public string? FirstName
     {
@@ -55,7 +55,7 @@ public class Contact : ICloneable
     }
 
     /// <summary>
-    ///   Фамилия контакта
+    ///   Фамилия контакта.
     /// </summary>
     public string? LastName
     {
@@ -68,12 +68,12 @@ public class Contact : ICloneable
     }
 
     /// <summary>
-    ///   Телефонный номер
+    ///   Телефонный номер.
     /// </summary>
     public PhoneNumber? PhoneNumber { get; set; }
 
     /// <summary>
-    ///   Идентификатор контакта в соц. сети vk.com
+    ///   Идентификатор контакта в соц. сети vk.com.
     /// </summary>
     public string? VkId
     {
@@ -86,7 +86,7 @@ public class Contact : ICloneable
     }
 
     /// <summary>
-    ///   Метод клонирования контакта
+    ///   Метод клонирования контакта.
     /// </summary>
     /// <returns> Копия контакта </returns>
     public object Clone()
@@ -105,7 +105,7 @@ public class Contact : ICloneable
     }
 
     /// <summary>
-    ///   Метод проверки валидации строки по ее длине
+    ///   Метод проверки валидации строки по ее длине.
     /// </summary>
     /// <param name="str"> Проверяемая строка </param>
     /// <param name="minLen"> Минимально допустимая длина </param>

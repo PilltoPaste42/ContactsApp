@@ -5,7 +5,7 @@ using System.IO;
 using System.Linq;
 
 /// <summary>
-///   Класс фиктивного контакта для отладки
+///   Класс фиктивного контакта для отладки.
 /// </summary>
 public static class ContactMock
 {
@@ -14,7 +14,7 @@ public static class ContactMock
     private static readonly Random Generator = new();
 
     /// <summary>
-    ///   Создание фиктивного контакта
+    ///   Создание фиктивного контакта.
     /// </summary>
     public static Contact Get()
     {
@@ -34,7 +34,7 @@ public static class ContactMock
     }
 
     /// <summary>
-    ///   Получение случайной даты
+    ///   Получение случайной даты.
     /// </summary>
     private static DateTime GetRandomDate()
     {
@@ -46,7 +46,7 @@ public static class ContactMock
     }
 
     /// <summary>
-    ///   Получение случайного email
+    ///   Получение случайного email.
     /// </summary>
     private static string GetRandomEmail()
     {
@@ -54,7 +54,7 @@ public static class ContactMock
     }
 
     /// <summary>
-    ///   Получение случайного ФИО из файла
+    ///   Получение случайного ФИО из файла.
     /// </summary>
     /// <returns> Строка с полным именем </returns>
     private static string GetRandomFullName()
@@ -69,7 +69,7 @@ public static class ContactMock
     }
 
     /// <summary>
-    ///   Получение случайного номера телефона
+    ///   Получение случайного номера телефона.
     /// </summary>
     private static PhoneNumber GetRandomPhoneNumber()
     {

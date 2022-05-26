@@ -5,7 +5,7 @@ using System;
 using Newtonsoft.Json;
 
 /// <summary>
-///   Объект для хранения номера телефона
+///   Объект для хранения номера телефона.
 /// </summary>
 public class PhoneNumber
 {
@@ -18,7 +18,7 @@ public class PhoneNumber
     }
 
     /// <summary>
-    ///   Номер телефона
+    ///   Номер телефона.
     /// </summary>
     public ulong Phone
     {
@@ -33,7 +33,7 @@ public class PhoneNumber
     }
 
     /// <summary>
-    ///   Получение номера в виде строки
+    ///   Получение номера в виде строки.
     /// </summary>
     /// <returns> Строка с номером </returns>
     public string GetToString()

@@ -3,7 +3,7 @@
 using System.Windows;
 
 /// <summary>
-///   Логика взаимодействия для AboutAppWindow.xaml
+///   Логика взаимодействия для AboutAppWindow.xaml.
 /// </summary>
 public partial class AboutAppWindow : Window
 {

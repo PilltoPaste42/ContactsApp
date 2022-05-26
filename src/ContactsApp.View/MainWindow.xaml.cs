@@ -7,7 +7,7 @@ using System.Windows.Controls;
 using ContactsApp.Models;
 
 /// <summary>
-///   Interaction logic for MainWindow.xaml
+///   Логика главного окна.
 /// </summary>
 public partial class MainWindow : Window
 {
@@ -22,7 +22,7 @@ public partial class MainWindow : Window
     }
 
     /// <summary>
-    ///   Обновление спика контактов
+    ///   Обновление спика контактов.
     /// </summary>
     public void UpdateContactsListBox()
     {
@@ -35,7 +35,7 @@ public partial class MainWindow : Window
     }
 
     /// <summary>
-    ///   Добавление контакта
+    ///   Добавление контакта.
     /// </summary>
     private void AddContact(Contact contact)
     {
@@ -49,7 +49,7 @@ public partial class MainWindow : Window
     }
 
     /// <summary>
-    ///   Добавление контакта в справочник с помощью формы
+    ///   Добавление контакта в справочник с помощью формы.
     /// </summary>
     private void AddContactInForm()
     {
@@ -73,7 +73,7 @@ public partial class MainWindow : Window
     }
 
     /// <summary>
-    ///   Удаление контакта
+    ///   Удаление контакта.
     /// </summary>
     /// <param name="index"> Индекс контакта в списке </param>
     private void DeleteContact(int index)
@@ -87,7 +87,7 @@ public partial class MainWindow : Window
     }
 
     /// <summary>
-    ///   Удаление выбранного из списка контакта
+    ///   Удаление выбранного из списка контакта.
     /// </summary>
     private void DeleteSelectedElementInContactList()
     {
@@ -145,7 +145,7 @@ public partial class MainWindow : Window
     }
 
     /// <summary>
-    ///   Обновление выбранного контакта с помощью данных из формы
+    ///   Обновление выбранного контакта с помощью данных из формы.
     /// </summary>
     private void UpdateSelectedElementInListBox()
     {

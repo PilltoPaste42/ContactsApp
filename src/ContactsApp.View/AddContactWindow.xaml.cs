@@ -5,7 +5,7 @@ using System.Windows;
 using ContactsApp.Models;
 
 /// <summary>
-///   Логика взаимодействия для AddContactWindow.xaml
+///   Логика взаимодействия для AddContactWindow.xaml.
 /// </summary>
 public partial class AddContactWindow : Window
 {
@@ -32,7 +32,7 @@ public partial class AddContactWindow : Window
     }
 
     /// <summary>
-    ///   Создание заглушки контакта и установка значений в форму
+    ///   Создание заглушки контакта и установка значений в форму.
     /// </summary>
     private void SetRandomContact()
     {
