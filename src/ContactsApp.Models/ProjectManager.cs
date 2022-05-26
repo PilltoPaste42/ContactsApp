@@ -6,17 +6,17 @@ using System.IO;
 using Newtonsoft.Json;
 
 /// <summary>
-///   Класс для работы с данными приложения
+///   Класс для работы с данными приложения.
 /// </summary>
 public sealed class ProjectManager
 {
     /// <summary>
-    ///   Путь к файлу для чтения/записи данных
+    ///   Путь к файлу для чтения/записи данных.
     /// </summary>
     private const string PROJECT_FILE_PATH = "./ContactsApp.notes";
 
     /// <summary>
-    ///   Экземпляр менеджера проекта (реализация паттерна Singleton)
+    ///   Экземпляр менеджера проекта (реализация паттерна Singleton).
     /// </summary>
     private static ProjectManager? _instance;
 
@@ -27,7 +27,7 @@ public sealed class ProjectManager
     }
 
     /// <summary>
-    ///   Метод получения экземпляра менеджера проекта
+    ///   Метод получения экземпляра менеджера проекта.
     /// </summary>
     public static ProjectManager? Instance
     {
@@ -42,7 +42,7 @@ public sealed class ProjectManager
     }
 
     /// <summary>
-    ///   Метод загрузки данных проекта из файла
+    ///   Метод загрузки данных проекта из файла.
     /// </summary>
     public Project LoadProject()
     {

@@ -5,7 +5,7 @@ using System.Windows.Controls;
 using ContactsApp.Models;
 
 /// <summary>
-///   Логика взаимодействия для ContactForm.xaml
+///   Логика взаимодействия для ContactForm.xaml.
 /// </summary>
 public partial class ContactForm : UserControl
 {
@@ -15,7 +15,7 @@ public partial class ContactForm : UserControl
     }
 
     /// <summary>
-    ///   Очистка полей формы
+    ///   Очистка полей формы.
     /// </summary>
     public void Clear()
     {
@@ -28,7 +28,7 @@ public partial class ContactForm : UserControl
     }
 
     /// <summary>
-    ///   Получение экземпляра контакта из формы
+    ///   Получение экземпляра контакта из формы.
     /// </summary>
     public Contact GetContact()
     {
@@ -44,7 +44,7 @@ public partial class ContactForm : UserControl
     }
 
     /// <summary>
-    ///   Установка данных контакта в поля формы
+    ///   Установка данных контакта в поля формы.
     /// </summary>
     public void SetContact(Contact contact)
     {
